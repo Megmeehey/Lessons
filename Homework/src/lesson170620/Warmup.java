@@ -2,7 +2,8 @@ package lesson170620;
 
 /**
  * Created by Megmeehey on 20.06.17.
- * Codingbat.com Warmup-1 code practice
+ * Codingbat.com Warmup-1 code practice at
+ * http://codingbat.com/java/Warmup-1
  */
 
 public class Warmup {
