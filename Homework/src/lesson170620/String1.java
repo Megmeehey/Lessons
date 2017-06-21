@@ -275,4 +275,84 @@ public class String1 {
         }
         return sb.toString();
     }
+
+    public String startWord(String str, String word) {
+        if (str.length() < word.length()) {
+            return "";
+        }
+        if (word.length() == 1) {
+            return str.substring(0, 1);
+        }
+        else if (str.substring(1, str.length()).startsWith(word.substring(1, word.length()))) {
+            return str.substring(0, word.length());
+        }
+        else {
+            return "";
+        }
+    }
+
+    public String withoutX(String str) {
+        StringBuilder sb = new StringBuilder("");
+        if (str.length() == 0) {
+            return "";
+        }
+        else if (str.length() == 1) {
+            if (str.charAt(0) != 'x') {
+                sb.append(str);
+            }
+        }
+        else if (str.length() == 2) {
+            if (str.charAt(0) != 'x') {
+                sb.append(str.substring(0, 1));
+            }
+            if (str.charAt(1) != 'x') {
+                sb.append(str.substring(1, 2));
+            }
+        }
+        else {
+            if (str.charAt(0) != 'x') {
+                sb.append(str.substring(0, 1));
+            }
+
+            sb.append(str.substring(1, str.length() - 1));
+
+            if (str.charAt(str.length() - 1) != 'x') {
+                sb.append(str.substring(str.length() - 1, str.length()));
+            }
+        }
+        return sb.toString();
+    }
+
+    public String withoutX2(String str) {
+        StringBuilder sb = new StringBuilder("");
+        if (str.length() == 0) {
+            return "";
+        }
+        else if (str.length() == 1) {
+            if (str.charAt(0) != 'x') {
+                sb.append(str);
+            }
+        }
+        else if (str.length() == 2) {
+            if (str.charAt(0) != 'x') {
+                sb.append(str.substring(0, 1));
+            }
+            if (str.charAt(1) != 'x') {
+                sb.append(str.substring(1, 2));
+            }
+        }
+        else {
+            if (str.charAt(0) != 'x') {
+                sb.append(str.substring(0, 1));
+            }
+
+            if (str.charAt(1) != 'x') {
+                sb.append(str.substring(1, 2));
+            }
+
+            sb.append(str.substring(2, str.length()));
+        }
+        return sb.toString();
+    }
+
 }
