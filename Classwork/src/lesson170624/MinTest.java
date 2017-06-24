@@ -1,7 +1,6 @@
 package lesson170624;
 import static lesson170624.MathUtils.min;
-import static lesson170624.SimpleUnit.assertEquals;
-import static lesson170624.SimpleUnit.assertNotEquals;
+import static lesson170624.SimpleUnit.*;
 
 /**
  * Created by Megmeehey on 24.06.17.

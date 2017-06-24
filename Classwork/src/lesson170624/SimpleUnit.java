@@ -38,4 +38,19 @@ public class SimpleUnit {
         return nEq;
     }
 
+    public static boolean assertEquals(boolean actual, boolean expected) {
+        boolean eq = actual == expected;
+        if (!eq) {
+            System.err.println("Test failed: expected " + expected + ", but actual " + actual);
+        }
+        return eq;
+    }
+
+    public static boolean assertNotEquals(boolean actual, boolean expected) {
+        boolean nEq = actual != expected;
+        if (!nEq) {
+            System.err.println("Test failed: expected NOT " + expected + ", but actual " + actual);
+        }
+        return nEq;
+    }
 }
