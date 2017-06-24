@@ -11,6 +11,7 @@ public class MaxTest {
         System.out.println(assertEquals(MathUtils.max(30, 30), 30));
         System.out.println(assertEquals(MathUtils.max(30, 10), 30));
         System.out.println(assertEquals(MathUtils.max(33, 20), 33));
+        System.out.println(assertEquals(MathUtils.max(35, -20), 35));
         System.out.println(assertEquals(MathUtils.max(10, -10), 10));
         System.out.println(assertNotEquals(MathUtils.max(5, -10), -10));
 
