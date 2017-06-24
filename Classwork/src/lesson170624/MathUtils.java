@@ -12,4 +12,8 @@ public class MathUtils {
             return j;
         }
     }
+
+    public static int min(int i, int j) {
+        return i > j ? j : i;
+    }
 }
