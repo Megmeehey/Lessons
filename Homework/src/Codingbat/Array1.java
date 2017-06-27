@@ -1,4 +1,4 @@
-package lesson170620;
+package Codingbat;
 
 import java.util.ArrayList;
 import java.util.List;

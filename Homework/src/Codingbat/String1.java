@@ -1,4 +1,4 @@
-package lesson170620;
+package Codingbat;
 
 /**
  * Created by Megmeehey on 21.06.17.
