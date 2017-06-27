@@ -131,6 +131,7 @@ public class Tests {
         // NotEquals
         System.out.println("#12 Testing isFibonacci(55):\t" + assertNotEquals(isFibonacci(55), false));
         System.out.println("#13 Testing isFibonacci(610):\t" + assertNotEquals(isFibonacci(610), false));
+        System.out.println("#14 Testing isFibonacci(611):\t" + assertNotEquals(isFibonacci(611), true));
     }
 
     public static void testMod() {
