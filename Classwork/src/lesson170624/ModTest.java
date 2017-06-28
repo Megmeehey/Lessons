@@ -7,5 +7,7 @@ import static lesson170624.SimpleUnit.*;
  */
 
 public class ModTest {
-
+    public void oloolol() {
+        System.out.println("refactoring test");
+    }
 }

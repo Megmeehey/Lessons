@@ -2,7 +2,6 @@ package lesson170624;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 import static lesson170624.MathUtils.*;
 import static lesson170624.SimpleUnit.*;
 
