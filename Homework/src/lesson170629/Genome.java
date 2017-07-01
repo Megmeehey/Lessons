@@ -1,5 +1,8 @@
 package lesson170629;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Megmeehey on 29.06.2017.
  */
@@ -14,8 +17,10 @@ public class Genome {
     3) HashSet
      */
 
+    private static final int GENOME_SIZE = 300000;
+
     public static void main(String[] args) {
-        byte[] data = DataGenerator.generate(100);
+        byte[] data = DataGenerator.generate(GENOME_SIZE);
         for (byte b : data) {
             System.out.print((char) b);
         }
@@ -48,5 +53,17 @@ public class Genome {
     }
 
     // second solution
+    private static void findDuplicatesSSW(byte[] data, int wordSize) {
+        List<String> allWordsArray = new ArrayList<String>();
+        for (int i = 0; i < data.length - wordSize; i++) {
+            StringBuilder sb = new StringBuilder("");
+            for (int j = i; j < wordSize; j++) {
+                sb.append((char) data[j]);
+            }
+            allWordsArray.add(sb.toString());
+        }
+        // Well, that's bad... We take too much memory with all these strings
+
+    }
     // private static void
 }
