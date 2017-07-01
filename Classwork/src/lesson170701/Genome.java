@@ -1,10 +1,11 @@
-package lesson170629;
+package lesson170701;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Megmeehey on 29.06.2017.
+ * Updated on 01.07.2017.
  */
 public class Genome {
     /*
@@ -16,8 +17,11 @@ public class Genome {
     2) Sort substrings length W
     3) HashSet
      */
+
+    private static final int GENOME_SIZE = 300000;
+
     public static void main(String[] args) {
-        byte[] data = DataGenerator.generate(300000);
+        byte[] data = DataGenerator.generate(GENOME_SIZE);
         for (byte b : data) {
             System.out.print((char) b);
         }
