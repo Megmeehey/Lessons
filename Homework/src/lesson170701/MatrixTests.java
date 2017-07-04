@@ -1,5 +1,7 @@
 package lesson170701;
 
+import java.util.Arrays;
+
 import static lesson170701.MatrixUtils.*;
 
 /**
@@ -19,13 +21,17 @@ public class MatrixTests {
                 {6, 7, 8},
         };
 
-        printMatrix(matrix);
+        // Arrays.toString() would give us array of links, which is not what expected, obviously. Arrays.deepToString(), however, works fine
+        // but doesn't add \n at each printed array.
+        // System.out.println(Arrays.deepToString(matrix));
+        print2DMatrix(matrix);
         System.out.println("Sums of rows w\\o negative nums (no matrix generation)");
         printRowNoNegativesSums(matrix);
         System.out.println();
 
         int[][] M = generate2DMatrix(3,3, 100);
-        printMatrix(M);
+        // System.out.println(Arrays.deepToString(M));
+        print2DMatrix(M);
         System.out.println("Sums of rows w\\o negative nums (matrix generated)");
         printRowNoNegativesSums(M);
         // System.out.println("Sum of rows w\\o negative nums = " + sumIfNoNegatives(M));

@@ -97,7 +97,7 @@ public class MatrixUtils {
         return matrix;
     }
 
-    public static void printMatrix(int[][] matrix) {
+    public static void print2DMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             System.out.println(Arrays.toString(matrix[i]));
         }
