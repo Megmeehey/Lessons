@@ -48,6 +48,31 @@ public class MatrixUtils {
         return wholeSum;
     }
 
+    public static void printRowNoNegativesSums(int[][] matrix) {
+        int currentSum = 0;
+        boolean found = false;
+
+        OUTER:
+        for (int i = 0; i < matrix.length; i++) {
+            int[] row = matrix[i];
+            currentSum = 0;
+            for (int j = 0; j < row.length; j++) {
+                if (row[j] >= 0) {
+                    currentSum += row[j];
+                } else {
+                    continue OUTER;
+                }
+            }
+            System.out.println("Found this row w\\o negatives: " + Arrays.toString(matrix[i]) + " with sum = " + currentSum);
+            found = true;
+        }
+
+        if (!found) {
+            System.out.println("No such rows found :( ");
+        }
+    }
+
+
     public static int[][] generate2DMatrix(int numOfColumns, int numOfRows) {
         Random rnd = new Random();
         int[][] matrix = new int[numOfColumns][numOfRows];

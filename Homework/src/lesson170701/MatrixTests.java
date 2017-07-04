@@ -20,12 +20,14 @@ public class MatrixTests {
         };
 
         printMatrix(matrix);
-        System.out.println("Sum of rows w\\o negative nums (no matrix generation) = " + sumIfNoNegatives(matrix));
+        System.out.println("Sums of rows w\\o negative nums (no matrix generation)");
+        printRowNoNegativesSums(matrix);
         System.out.println();
 
         int[][] M = generate2DMatrix(3,3, 100);
         printMatrix(M);
-
-        System.out.println("Sum of rows w\\o negative nums = " + sumIfNoNegatives(M));
+        System.out.println("Sums of rows w\\o negative nums (matrix generated)");
+        printRowNoNegativesSums(M);
+        // System.out.println("Sum of rows w\\o negative nums = " + sumIfNoNegatives(M));
     }
 }
