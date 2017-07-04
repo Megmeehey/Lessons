@@ -19,6 +19,10 @@ public class MatrixTests {
                 {6, 7, 8},
         };
 
+        printMatrix(matrix);
+        System.out.println("Sum of rows w\\o negative nums (no matrix generation) = " + sumIfNoNegatives(matrix));
+        System.out.println();
+
         int[][] M = generate2DMatrix(3,3, 100);
         printMatrix(M);
 

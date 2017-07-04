@@ -1,5 +1,10 @@
 package Codingbat;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Created by Megmeehey on 22.06.17.
  * Codingbat.com Logic-1 code practice at
@@ -259,18 +264,67 @@ public class Logic1 {
         int divided = num / 10;
         if (num % 10 >= 5) {
             return 10 * (divided + 1);
-        }
-        else {
+        } else {
             return 10 * divided;
         }
     }
 
-    /*public boolean closeFar(int a, int b, int c) {
+    public boolean closeFar(int a, int b, int c) {
         if (Math.abs(b - a) <= 1) {
-
+            if (Math.abs(c - a) >= 2 && Math.abs(c - b) >= 2) {
+                return true;
+            }
+            return false;
         }
         if (Math.abs(c - a) <= 1) {
-
+            if (Math.abs(b - a) >= 2 && Math.abs(c - b) >= 2) {
+                return true;
+            }
+            return false;
         }
-    } */
+        return false;
+    }
+
+    public int blackjack(int a, int b) {
+        if (a > 21 && b > 21) {
+            return 0;
+        } else if (a > 21) {
+            return b;
+        } else if (b > 21) {
+            return a;
+        } else if (Math.abs(21 - a) > Math.abs(21 - b)) {
+            return b;
+        } else {
+            return a;
+        }
+    }
+
+    public boolean evenlySpaced(int a, int b, int c) {
+        int max = Math.max(Math.max(a, b), c);
+        int min = Math.min(Math.min(a, b), c);
+        int mid = 0;
+        if ((a >= b) && (a <= c) || (a <= b) && (a >= c)) {
+            mid = a;
+        }
+        if ((b >= a) && (b <= c) || (b <= a) && (b >= c)) {
+            mid = b;
+        }
+        if ((c >= b) && (c <= a) || (c <= b) && (c >= a)) {
+            mid = c;
+        }
+        return mid - min == max - mid;
+    }
+
+    public int makeChocolate(int small, int big, int goal) {
+        int b = goal / 5;
+        int rem = goal % 5;
+        if (big < b) {
+            rem += 5 * (b - big);
+        }
+        if (small >= rem) {
+            return rem;
+        } else {
+            return -1;
+        }
+    }
 }
