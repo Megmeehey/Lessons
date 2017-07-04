@@ -41,6 +41,7 @@ public class MatrixUtils {
                     continue OUTER;
                 }
             }
+            // here we can print out currentSum of this particular row, if needed.
             wholeSum += currentSum;
         }
 

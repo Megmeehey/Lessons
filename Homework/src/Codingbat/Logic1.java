@@ -239,4 +239,38 @@ public class Logic1 {
         }
     }
 
+    public int noTeenSum(int a, int b, int c) {
+        return fixTeen(a) + fixTeen(b) + fixTeen(c);
+    }
+
+    public int fixTeen(int n) {
+        if ((n >= 13 && n <= 14) || (n >= 17 && n <= 19)) {
+            return 0;
+        } else {
+            return n;
+        }
+    }
+
+    public int roundSum(int a, int b, int c) {
+        return round10(a) + round10(b) + round10(c);
+    }
+
+    public int round10(int num) {
+        int divided = num / 10;
+        if (num % 10 >= 5) {
+            return 10 * (divided + 1);
+        }
+        else {
+            return 10 * divided;
+        }
+    }
+
+    /*public boolean closeFar(int a, int b, int c) {
+        if (Math.abs(b - a) <= 1) {
+
+        }
+        if (Math.abs(c - a) <= 1) {
+
+        }
+    } */
 }
