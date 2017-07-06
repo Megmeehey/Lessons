@@ -11,9 +11,27 @@ public class SimpleArraysUtils {
      */
 
     /**
+     * region: StringBuilder variant:
+    public static <E> String printArray(E[] array) {
+        if (array == null) {
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < array.length; i++) {
+            sb.append(array[i].toString());
+            if (i + 1 < array.length) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+    }
+     */
+
+    /**
      * @param array - Array to print
      * @param <E> - Type of variables in given array
-     *           Better to return builded string.
+     *           (Better to return builded string with StringBuider)
      */
     public static <E> void printArray(E[] array) {
         if (array == null) {
