@@ -6,7 +6,6 @@ import java.util.Random;
  * Created by Megmeehey on 05.07.2017.
  */
 public class SimpleArraysUtils {
-
     /*
      * Series of Prints array methods for boxed values and primitives
      */
@@ -17,6 +16,10 @@ public class SimpleArraysUtils {
      *           Better to return builded string.
      */
     public static <E> void printArray(E[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i].toString());
@@ -28,6 +31,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(boolean[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -39,6 +46,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(byte[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -50,6 +61,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(char[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -61,6 +76,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(short[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -72,6 +91,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(int[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -83,6 +106,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(long[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -94,6 +121,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(float[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -105,6 +136,10 @@ public class SimpleArraysUtils {
     }
 
     public static void printArray(double[] array) {
+        if (array == null) {
+            System.out.print("null");
+            return;
+        }
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
