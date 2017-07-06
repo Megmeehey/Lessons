@@ -82,6 +82,50 @@ public class String2 {
     }
 
     public boolean endOther(String a, String b) {
+        return a.toLowerCase().endsWith(b.toLowerCase()) || b.toLowerCase().endsWith(a.toLowerCase());
+    }
 
+    public boolean xyzThere(String str) {
+        final String SEARCHVALUE = "xyz";
+        int countOccurences = 0;
+        for (int index = str.indexOf(SEARCHVALUE); index >= 0; index = str.indexOf(SEARCHVALUE, index + 1)) {
+            if (index - 1 >= 0) {
+                if (!(str.charAt(index - 1) == '.')) {
+                    countOccurences++;
+                    break;
+                }
+            } else {
+                countOccurences++;
+                break;
+            }
+        }
+        return countOccurences > 0;
+    }
+
+    public boolean bobThere(String str) {
+        final String SEARCHVALUE = "b";
+        int countOccurences = 0;
+        for (int index = str.indexOf(SEARCHVALUE); index >= 0; index = str.indexOf(SEARCHVALUE, index + 1)) {
+            if (str.length() > index + 2) {
+                if (str.charAt(index + 2) == 'b') {
+                    countOccurences++;
+                    break;
+                }
+            }
+        }
+        return countOccurences > 0;
+    }
+
+    public boolean xyBalance(String str) {
+        boolean hasX = false;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x') {
+                hasX = true;
+            }
+            if (hasX && str.charAt(i) == 'y') {
+                hasX = false;
+            }
+        }
+        return !hasX;
     }
 }
