@@ -6,7 +6,12 @@ package lesson170624;
  */
 
 public class SimpleUnit {
+    public static final String EXPECTED = " failed: expected '";
+    public static final String ACTUAL = "', but actual ";
+    public static final String EXPECTED_NOT = " failed: expected NOT '";
     private static int testNumber;
+    public static final String TEST = "Test #";
+
 
     static {
         testNumber = 0;
@@ -20,7 +25,7 @@ public class SimpleUnit {
         boolean equals = actual.equals(expected);
         testNumber++;
         if (!equals) {
-            System.err.println("Test #" + testNumber + " failed: expected " + expected + ", but actual " + actual);
+            System.err.println(TEST + testNumber + EXPECTED + expected + ACTUAL + actual);
         }
         return equals;
     }
@@ -29,7 +34,7 @@ public class SimpleUnit {
         boolean notEquals = !actual.equals(expected);
         testNumber++;
         if (!notEquals) {
-            System.err.println("Test #" + testNumber + " failed: expected NOT " + expected + ", but actual " + actual);
+            System.err.println(TEST + testNumber + EXPECTED_NOT + expected + ACTUAL + actual);
         }
         return notEquals;
     }
@@ -38,7 +43,7 @@ public class SimpleUnit {
         boolean eq = actual == expected;
         testNumber++;
         if (!eq) {
-            System.err.println("Test #" + testNumber + " failed: expected " + expected + ", but actual " + actual);
+            System.err.println(TEST + testNumber + EXPECTED + expected + ACTUAL + actual);
         }
         return eq;
     }
@@ -47,7 +52,7 @@ public class SimpleUnit {
         boolean nEq = actual != expected;
         testNumber++;
         if (!nEq) {
-            System.err.println("Test #" + testNumber + " failed: expected NOT " + expected + ", but actual " + actual);
+            System.err.println(TEST + testNumber + EXPECTED_NOT + expected + ACTUAL + actual);
         }
         return nEq;
     }
@@ -56,7 +61,7 @@ public class SimpleUnit {
         boolean eq = actual == expected;
         testNumber++;
         if (!eq) {
-            System.err.println("Test #" + testNumber + " failed: expected " + expected + ", but actual " + actual);
+            System.err.println(TEST + testNumber + EXPECTED + expected + ACTUAL + actual);
         }
         return eq;
     }
@@ -65,7 +70,7 @@ public class SimpleUnit {
         boolean nEq = actual != expected;
         testNumber++;
         if (!nEq) {
-            System.err.println("Test #" + testNumber + " failed: expected NOT " + expected + ", but actual " + actual);
+            System.err.println(TEST + testNumber + EXPECTED_NOT + expected + ACTUAL + actual);
         }
         return nEq;
     }
