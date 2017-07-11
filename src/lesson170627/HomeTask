@@ -1,0 +1,10 @@
+June 27, 2017
+
+Написать методы, преобразующие десятичное число в строковое представление в разных системах счисления
+
+- System.out.println(x);
+- System.out.println(Integer.toBinaryString(x));
+- System.out.println(Integer.toHexString(x));
+- System.out.println(Integer.toOctalString(x));
+
+- System.out.println(Integer.toString(x,3));  // с указанием основания системы счисления  optional

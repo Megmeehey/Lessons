@@ -1,0 +1,5 @@
+July 7, 2017
+
+Дописать в StringMethodsPractice методы trim и replace
+
+Доделать класс StringArrayList:   добавить методы get, set, size, isEmpty, remove(value), toString (переписать)
