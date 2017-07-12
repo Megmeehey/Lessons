@@ -1,60 +1,49 @@
 package lesson170704.homework;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created by Megmeehey on 05.07.2017.
+ * LSD radix sort
  */
 public class RadixSort {
-    /**
-     * Finds maximum value in array
-     * @param array - array, where to do the search
-     * @return - maximum value
-     */
-    static int getMaximumInArray(int array[]) {
-        int currentMax = array[0];
-        for (int i = 1; i < array.length; i++)
-            if (array[i] > currentMax)
-                currentMax = array[i];
-        return currentMax;
-    }
+    private static final int BIGPLACE = 1_000_000_000;
 
+    // Sort the numbers, beginning with least-significant digit
+    public static int[] radixsort(int[] input){
 
-    public static void radixsort(int[] input) {
-        final int RADIX = 10;
-        // declare and initialize bucket[]
-        List<Integer>[] bucket = new ArrayList[RADIX];
-        for (int i = 0; i < bucket.length; i++) {
-            bucket[i] = new ArrayList<Integer>();
+        // Largest place for a 32-bit int is the 1 billion's place
+        for(int place=1; place <= BIGPLACE; place *= 10){
+            // Use counting sort at each digit's place
+            input = countingSort(input, place);
         }
 
-        // sort
-        boolean maxLength = false;
-        int tmp = -1, placement = 1;
-        while (!maxLength) {
-            maxLength = true;
-            // split input between lists
-            for (Integer i : input) {
-                tmp = i / placement;
-                bucket[tmp % RADIX].add(i);
-                if (maxLength && tmp > 0) {
-                    maxLength = false;
-                }
-            }
-            // empty lists into input array
-            int a = 0;
-            for (int b = 0; b < RADIX; b++) {
-                for (Integer i : bucket[b]) {
-                    input[a++] = i;
-                }
-                bucket[b].clear();
-            }
-            // move to next digit
-            placement *= RADIX;
-        }
-        System.out.println(Arrays.toString(input));
+        return input;
     }
 
+    private static int[] countingSort(int[] input, int place){
+        int[] out = new int[input.length];
+        int[] count = new int[10];
+
+        for(int i=0; i < input.length; i++){
+            int digit = getDigit(input[i], place);
+            count[digit] += 1;
+        }
+
+        for(int i=1; i < count.length; i++){
+            count[i] += count[i-1];
+        }
+
+        for(int i = input.length-1; i >= 0; i--){
+            int digit = getDigit(input[i], place);
+
+            out[count[digit]-1] = input[i];
+            count[digit]--;
+        }
+
+        return out;
+
+    }
+
+    private static int getDigit(int value, int digitPlace){
+        return ((value/digitPlace ) % 10);
+    }
 }

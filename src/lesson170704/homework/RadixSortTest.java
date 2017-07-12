@@ -11,21 +11,22 @@ import static lesson170704.homework.RadixSort.radixsort;
  */
 public class RadixSortTest {
     public static final int BIGARRAY = 1_000_000;
-    public static final int MODULO = 1000;
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 9, 123213, 8, 7, 6, 5, 4, 3, 3, 3, 48};
-
-        performRadix(array);
 
         int[] bigArray = new int[BIGARRAY];
+        int[] anotherBigArray = new int[BIGARRAY];
+        // int[] yetAnotherBigArray = new int[BIGARRAY];
+
         Random rnd = new Random();
         for (int i = 0; i < bigArray.length; i++) {
             bigArray[i] = i;
+            anotherBigArray[i] = i;
         }
 
         shuffleArray(bigArray);
-        performRadix(bigArray);
+        shuffleArray(anotherBigArray);
+        performRadix(bigArray, anotherBigArray);
     }
 
     private static void shuffleArray(int[] array)
@@ -40,9 +41,19 @@ public class RadixSortTest {
         }
     }
 
-    public static void performRadix(int[] array) {
-        System.out.println("Array:        " + Arrays.toString(array));
-        radixsort(array);
-        System.out.println("Sorted array: " + Arrays.toString(array));
+    private static void performRadix(int[] array, int[] anotherArray) {
+        long start = System.currentTimeMillis();
+        array = radixsort(array);
+        long end = System.currentTimeMillis();
+        System.out.println("Time elapsed, while sorting (in millis): " + (end - start));
+
+        // Check if it is working
+        Arrays.sort(anotherArray);
+        System.out.println("It's sorted, right?");
+        if (Arrays.equals(array, anotherArray)) {
+            System.out.println("YEP!");
+        } else {
+            System.out.println("Nope, sorry! :(");
+        }
     }
 }
