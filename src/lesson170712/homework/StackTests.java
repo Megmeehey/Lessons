@@ -24,6 +24,15 @@ public class StackTests {
 
         System.out.println("A: " + actualStack);
 
+        expectedStack.push(" ");
+        expectedStack.push("Wolves");
+        expectedStack.push("have");
+
+        actualStack.push(" ");
+        actualStack.push("Wolves");
+        actualStack.push("have");
+
+
         System.out.println("E capacity: " + expectedStack.capacity());
         System.out.println("A capacity: " + actualStack.capacity());
 
@@ -40,5 +49,24 @@ public class StackTests {
         System.out.println("Taking another element");
         System.out.println(expectedStack.pop());
         System.out.println(actualStack.pop());
+
+        System.out.println("Taking third element");
+        System.out.println(expectedStack.pop());
+        System.out.println(actualStack.pop());
+
+        System.out.println(expectedStack);
+        System.out.println(actualStack);
+
+        expectedStack.pop();
+        expectedStack.pop();
+        expectedStack.pop();
+        expectedStack.pop();
+        System.out.println(expectedStack.empty());
+
+        actualStack.pop();
+        actualStack.pop();
+        actualStack.pop();
+        actualStack.pop();
+        System.out.println(actualStack.empty());
     }
 }

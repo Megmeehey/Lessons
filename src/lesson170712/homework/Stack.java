@@ -7,6 +7,9 @@ import java.util.EmptyStackException;
  * Created by megmeehey on 14.07.17.
  */
 public class Stack<E> {
+    private static final String DELIMITER = ", ";
+    private static final String OPENINGBRACKET = "[";
+    private static final String CLOSINGBRACKET = "]";
     static final int DEFAULT_MAX_SIZE = 3;
 
     private final Object[] dataArray;
@@ -82,7 +85,18 @@ public class Stack<E> {
     }
 
     public String toString() {
-        return Arrays.toString(dataArray);
+        if (this.dataArray == null) {
+            System.out.print("null");
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(OPENINGBRACKET);
+        sb.append(this.dataArray[0]);
+        for (int i = 1; i < this.size(); i++) {
+            sb.append(DELIMITER).append(this.dataArray[i]);
+        }
+        sb.append(CLOSINGBRACKET);
+        return sb.toString();
     }
 }
 
