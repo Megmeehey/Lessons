@@ -1,6 +1,7 @@
 package lesson170712.homework;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 /**
  * Created by megmeehey on 14.07.17.
@@ -34,6 +35,9 @@ public class Stack<E> {
     }
 
     public E peek() {
+        if (size() == 0) {
+            throw new EmptyStackException();
+        }
         return elementAt(size() - 1);
     }
 

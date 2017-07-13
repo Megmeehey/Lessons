@@ -42,5 +42,9 @@ public class StackTests {
         System.out.println(expectedStack.pop());
         System.out.println(actualStack.peek());
         actualStack.removeElementAt(actualStack.size() - 1);
+        actualStack.removeElementAt(actualStack.size() - 1);
+        actualStack.removeElementAt(actualStack.size() - 1);
+        actualStack.removeElementAt(actualStack.size() - 1);
+        System.out.println(actualStack.peek());
     }
 }
