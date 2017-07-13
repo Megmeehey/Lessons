@@ -41,6 +41,15 @@ public class Stack<E> {
         return elementAt(size() - 1);
     }
 
+    public E pop() {
+        E dataItem;
+
+        dataItem = peek();
+        removeElementAt(size() - 1);
+
+        return dataItem;
+    }
+
     public boolean removeElementAt(int i) {
         if (i >= size || i < 0) {
             return false;
