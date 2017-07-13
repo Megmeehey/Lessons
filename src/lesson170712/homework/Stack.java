@@ -27,6 +27,9 @@ public class Stack<E> {
     }
 
     public void push(E item) {
+        if (size >= dataArray.length) {
+            throw new StackOverflowError();
+        }
         dataArray[size++] = item;
     }
 

@@ -21,6 +21,16 @@ public class StackTests {
         actualStack.push("don't");
         actualStack.push("have");
         actualStack.push("claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
+        actualStack.push("more claws");
 
         System.out.println("A: " + actualStack);
     }
