@@ -21,6 +21,11 @@ public class Stack<E> {
         this.size = array.length;
     }
 
+    public Stack(int maxSize) {
+        this.dataArray = new Object[maxSize];
+        this.size = 0;
+    }
+
     public void push(E item) {
         dataArray[size++] = item;
     }
