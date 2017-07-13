@@ -20,5 +20,13 @@ public class Stack<E> {
         this.dataArray = Arrays.copyOf(array, array.length);
         this.size = array.length;
     }
+
+    public void push(E item) {
+        dataArray[size++] = item;
+    }
+
+    public String toString() {
+        return Arrays.toString(dataArray);
+    }
 }
 
