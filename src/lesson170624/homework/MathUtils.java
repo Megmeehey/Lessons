@@ -33,7 +33,7 @@ public class MathUtils {
      * @param number - int value, which sign is to be returned
      * @return the signum function of the argument
      */
-    public static int sign(int number) {
+    static int sign(int number) {
         if (number > 0) {
             return 1;
         } else if (number < 0) {
@@ -55,7 +55,7 @@ public class MathUtils {
      * @param divisor - second number, divisor
      * @return remainder after division of numerator by divisor
      */
-    public static int mod(int numerator, int divisor) { // throws IllegalArgumentException {
+    static int mod(int numerator, int divisor) { // throws IllegalArgumentException {
         if (divisor == 0) {
             // throw new IllegalArgumentException("Argument 'divisor' is 0");
             System.err.println("Argument 'divisor' is 0");
@@ -80,7 +80,7 @@ public class MathUtils {
      * @param number - int number to check
      * @return true, if number is prime. False otherwise.
      */
-    public static boolean isPrime(int number) {
+    static boolean isPrime(int number) {
         // First, check if number is even, and != 2;
         if (number <= 1) {
             return false;
@@ -105,7 +105,7 @@ public class MathUtils {
      * @param number - int number to check
      * @return true, if number belongs to Fibonacci sequence. False otherwise.
      */
-    public static boolean isFibonacci(int number) {
+    static boolean isFibonacci(int number) {
         // Probably can be upgraded by adding array to store fibonacci sequence and searching through
         long fibCurrent = 1;
         long fibPrevious = 0;

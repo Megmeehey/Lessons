@@ -23,7 +23,7 @@ public class String3 {
     }
 
     public boolean equalIsNot(String str) {
-        str.toLowerCase();
+        str = str.toLowerCase();
         String findNot = "not";
         String findIs = "is";
         int lastIndex = 0;

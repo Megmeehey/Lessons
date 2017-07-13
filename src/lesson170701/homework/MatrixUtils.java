@@ -28,7 +28,7 @@ public class MatrixUtils {
 
     public static int sumIfNoNegatives(int[][] matrix) {
         int wholeSum = 0;
-        int currentSum = 0;
+        int currentSum;
 
         OUTER:
         for (int i = 0; i < matrix.length; i++) {
@@ -49,7 +49,7 @@ public class MatrixUtils {
     }
 
     public static void printRowNoNegativesSums(int[][] matrix) {
-        int currentSum = 0;
+        int currentSum;
         boolean found = false;
 
         OUTER:

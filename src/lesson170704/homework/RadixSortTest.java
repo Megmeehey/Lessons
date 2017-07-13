@@ -47,7 +47,7 @@ public class RadixSortTest {
         long end = System.currentTimeMillis();
         System.out.println("Time elapsed, while sorting (in millis): " + (end - start));
 
-        // Check if it is working
+        // Check if it is workingEpaM
         Arrays.sort(anotherArray);
         System.out.println("It's sorted, right?");
         if (Arrays.equals(array, anotherArray)) {
