@@ -32,5 +32,15 @@ public class StackTests {
 
         System.out.println("E empty? " + expectedStack.empty());
         System.out.println("A empty? " + actualStack.empty());
+
+        System.out.println("Taking one element");
+        System.out.println(expectedStack.pop());
+        System.out.println(actualStack.elementAt(actualStack.size() - 1));
+        actualStack.removeElementAt(actualStack.size() - 1);
+
+        System.out.println("Taking another element");
+        System.out.println(expectedStack.pop());
+        System.out.println(actualStack.elementAt(actualStack.size() - 1));
+        actualStack.removeElementAt(actualStack.size() - 1);
     }
 }

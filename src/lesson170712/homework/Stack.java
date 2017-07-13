@@ -33,6 +33,25 @@ public class Stack<E> {
         dataArray[size++] = item;
     }
 
+    public boolean removeElementAt(int i) {
+        if (i >= size || i < 0) {
+            return false;
+        }
+
+        if (i == size - 1) {
+            dataArray[--size] = null;
+            return true;
+        }
+
+        System.arraycopy(dataArray, i+1, dataArray, i, --size - i);
+        dataArray[size] = null;
+        return true;
+    }
+
+    public E elementAt(int i) {
+        return (E) dataArray[i];
+    }
+
     public int size() {
         return size;
     }
@@ -48,7 +67,5 @@ public class Stack<E> {
     public String toString() {
         return Arrays.toString(dataArray);
     }
-
-
 }
 
