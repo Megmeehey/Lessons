@@ -33,6 +33,10 @@ public class Stack<E> {
         dataArray[size++] = item;
     }
 
+    public E peek() {
+        return elementAt(size() - 1);
+    }
+
     public boolean removeElementAt(int i) {
         if (i >= size || i < 0) {
             return false;

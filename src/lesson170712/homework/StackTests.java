@@ -35,12 +35,12 @@ public class StackTests {
 
         System.out.println("Taking one element");
         System.out.println(expectedStack.pop());
-        System.out.println(actualStack.elementAt(actualStack.size() - 1));
+        System.out.println(actualStack.peek());
         actualStack.removeElementAt(actualStack.size() - 1);
 
         System.out.println("Taking another element");
         System.out.println(expectedStack.pop());
-        System.out.println(actualStack.elementAt(actualStack.size() - 1));
+        System.out.println(actualStack.peek());
         actualStack.removeElementAt(actualStack.size() - 1);
     }
 }
