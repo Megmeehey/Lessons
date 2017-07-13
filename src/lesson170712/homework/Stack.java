@@ -41,8 +41,14 @@ public class Stack<E> {
         return dataArray.length;
     }
 
+    public boolean empty() {
+        return size() == 0;
+    }
+
     public String toString() {
         return Arrays.toString(dataArray);
     }
+
+
 }
 

@@ -30,5 +30,7 @@ public class StackTests {
         System.out.println("E size: " + expectedStack.size());
         System.out.println("A size: " + actualStack.size());
 
+        System.out.println("E empty? " + expectedStack.empty());
+        System.out.println("A empty? " + actualStack.empty());
     }
 }
