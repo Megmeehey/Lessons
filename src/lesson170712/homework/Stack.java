@@ -33,6 +33,14 @@ public class Stack<E> {
         dataArray[size++] = item;
     }
 
+    public int size() {
+        return size;
+    }
+
+    public int capacity() {
+        return dataArray.length;
+    }
+
     public String toString() {
         return Arrays.toString(dataArray);
     }

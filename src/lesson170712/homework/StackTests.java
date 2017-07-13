@@ -21,17 +21,14 @@ public class StackTests {
         actualStack.push("don't");
         actualStack.push("have");
         actualStack.push("claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
-        actualStack.push("more claws");
 
         System.out.println("A: " + actualStack);
+
+        System.out.println("E capacity: " + expectedStack.capacity());
+        System.out.println("A capacity: " + actualStack.capacity());
+
+        System.out.println("E size: " + expectedStack.size());
+        System.out.println("A size: " + actualStack.size());
+
     }
 }
