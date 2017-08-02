@@ -1,8 +1,5 @@
 package lesson170624.classwork;
 
-/**
- * Created by Megmeehey on 24.06.17.
- */
 public class MathUtils {
     public static int max(int firstNum, int secondNum) {
         return firstNum > secondNum ? firstNum : secondNum;

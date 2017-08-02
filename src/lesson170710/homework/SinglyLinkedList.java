@@ -3,9 +3,6 @@ package lesson170710.homework;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/**
- * Created by megmeehey on 10.07.17.
- */
 public class SinglyLinkedList<E> implements Iterable<E> {
     private static final String DELIMITER = ", ";
     private static final String OPENINGBRACKET = "[";
@@ -181,7 +178,7 @@ public class SinglyLinkedList<E> implements Iterable<E> {
             return res;
         }
 
-        // IDK if we can remove elements in iterator
+        // IDK if I need to implement this
         public void remove() {
             throw new UnsupportedOperationException();
         }

@@ -2,9 +2,6 @@ package lesson170704.homework;
 
 import java.util.Random;
 
-/**
- * Created by Megmeehey on 05.07.2017.
- */
 public class SimpleArraysUtils {
     private static final String DELIMITER = ", ";
     private static final String OPENINGBRACKET = "[";

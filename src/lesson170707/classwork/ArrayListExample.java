@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by Megmeehey on 07.07.2017.
- */
 public class ArrayListExample {
     public static void main(String[] args) {
         List<String> listOfStrings = new ArrayList<String>();

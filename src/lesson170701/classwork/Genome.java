@@ -2,26 +2,11 @@ package lesson170701.classwork;
 
 import java.util.*;
 
-/**
- * Created by Megmeehey on 29.06.2017.
- * Updated on 01.07.2017.
- */
 public class Genome {
     // constants
     private static final int WORD_SIZE = 4;
     private static final int GENOME_SIZE = 50;
     private static final byte[] ALPHABET = new byte[]{'A', 'C', 'G', 'T'};
-
-    /*
-    String AAACGTGACATAGCTGATCGATCGTAGCATCGAC...
-    N = 100000
-    W = 20
-    Solutions:
-    1) for for for
-    1.5) Sort substrings length W
-    2) Sort substrings length W, but take care about memory
-    3) HashSet
-    */
 
     static class Word implements Comparable<Word> {
         byte[] data;

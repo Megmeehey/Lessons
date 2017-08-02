@@ -1,7 +1,7 @@
 package lesson170624.homework;
 
 /**
- * Created by Megmeehey on 24.06.17.
+ * I'll try to write some JavaDoc style comments here
  */
 
 public class MathUtils {

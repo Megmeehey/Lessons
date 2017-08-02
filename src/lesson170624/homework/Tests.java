@@ -6,10 +6,6 @@ import java.io.InputStreamReader;
 import static lesson170624.homework.MathUtils.*;
 import static lesson170624.homework.SimpleUnit.*;
 
-/**
- * Created by Megmeehey on 26.06.2017.
- */
-
 public class Tests {
     public static void main(String[] args) {
         System.out.println("Testing utils");

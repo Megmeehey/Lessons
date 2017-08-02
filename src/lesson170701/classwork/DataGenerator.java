@@ -3,8 +3,6 @@ package lesson170701.classwork;
 import java.util.Random;
 
 /**
- * Created by Megmeehey on 29.06.2017.
- * Updated on 01.07.2017.
  * Generates Data
  */
 public class DataGenerator {

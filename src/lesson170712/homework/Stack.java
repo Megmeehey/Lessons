@@ -3,9 +3,6 @@ package lesson170712.homework;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 
-/**
- * Created by megmeehey on 14.07.17.
- */
 public class Stack<E> {
     private static final String DELIMITER = ", ";
     private static final String OPENINGBRACKET = "[";

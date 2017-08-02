@@ -2,9 +2,6 @@ package lesson170719.homework;
 
 import java.awt.*;
 
-/**
- * Created by megmeehey on 24.07.17.
- */
 class CardPile {
     // coordinates of the card pile
     protected int x;

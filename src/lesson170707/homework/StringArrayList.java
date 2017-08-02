@@ -1,9 +1,5 @@
 package lesson170707.homework;
 
-/**
- * Created by Megmeehey on 07.07.2017.
- */
-
 import java.util.Arrays;
 
 public class StringArrayList {

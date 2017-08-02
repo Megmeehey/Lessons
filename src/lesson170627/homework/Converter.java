@@ -1,12 +1,12 @@
 package lesson170627.homework;
 
 /**
- * Created by Megmeehey on 28.06.2017.
  * Converter class. Converts decimal number to any base (up to 36)
- * Negative nums realised using sign, but not two’s complement.
+ * Negative nums realised using sign, but not "two’s complement".
  * TODO: use two's complement
  * TODO: fix Integer.MIN trouble
  */
+
 public class Converter {
     // Seems it's better to use simple array, than calculate needed char using int -> char conversion
     // Because (int) '9' = 57 and (int) 'A' = 65

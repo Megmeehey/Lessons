@@ -5,17 +5,14 @@ import java.util.Arrays;
 import static lesson170704.homework.SimpleArraysUtils.generateIntArray;
 import static lesson170704.homework.SimpleArraysUtils.printArray;
 
-/**
- * Created by Megmeehey on 05.07.2017.
- */
 public class ArraysTest {
     private static short[] nullTestArray;
 
     public static void main(String[] args) {
         System.out.println("Testing simple arrays utils");
 
-        // Q: Is boxing preferable? (Arrays.toStings)
-        // Convenient to do using apache commons lang ArrayUtils
+        // Q: Is boxing preferable? (Arrays.toString)
+
         // Arrays to test
         int[] testArray1 = generateIntArray(15, 100);
         char[] testArray2 = new char[]{'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!'};

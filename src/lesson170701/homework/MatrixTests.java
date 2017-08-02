@@ -2,9 +2,6 @@ package lesson170701.homework;
 
 import static lesson170701.homework.MatrixUtils.*;
 
-/**
- * Created by Megmeehey on 04.07.2017.
- */
 public class MatrixTests {
     public static void main(String[] args) {
         int[][] triangle = {
@@ -23,7 +20,7 @@ public class MatrixTests {
         // Arrays.deepToString(), however, works fine
         // but doesn't add '\n' after each printed array.
         // So, i implemented own method.
-        // System.out.println(Arrays.deepToString(matrix));
+
         print2DMatrix(matrix);
         System.out.println("Sums of rows w\\o negative nums (no matrix generation)");
         printRowNoNegativesSums(matrix);

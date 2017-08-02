@@ -1,8 +1,5 @@
 package lesson170724.homework;
 
-/**
- * Created by megmeehey on 26.07.17.
- */
 public class Rat implements Pet {
 
     Brain brain = new Hungry();

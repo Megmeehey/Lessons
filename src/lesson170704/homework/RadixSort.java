@@ -1,7 +1,6 @@
 package lesson170704.homework;
 
 /**
- * Created by Megmeehey on 05.07.2017.
  * LSD radix sort
  */
 public class RadixSort {

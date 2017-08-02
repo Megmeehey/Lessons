@@ -1,9 +1,5 @@
 package lesson170707.homework;
 
-/**
- * Created by megmeehey on 10.07.17.
- */
-
 public class UseStringArrayList {
 
     public static void main(String[] args) {

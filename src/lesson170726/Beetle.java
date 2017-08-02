@@ -1,7 +1,7 @@
 package lesson170726;
 
 /**
- * Created by megmeehey on 26.07.17.
+ * Task from OCA practice tests
  */
 public class Beetle extends Insect {
     public int getNumberOfSections() {return 0;}

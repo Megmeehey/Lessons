@@ -1,10 +1,5 @@
 package lesson170624.homework;
 
-/**
- * Created by Zaal Lyanov on 24.06.17.
- * Updatet by Megmeehey on 26.06.17.
- */
-
 public class SimpleUnit {
     public static final String EXPECTED = " failed: expected '";
     public static final String ACTUAL = "', but actual ";

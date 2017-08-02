@@ -2,9 +2,6 @@ package lesson170707.homework;
 
 import static lesson170624.homework.SimpleUnit.assertEquals;
 
-/**
- * Created by Megmeehey on 07.07.2017.
- */
 public class StringMethodsPractice {
 
     public static void main(String[] args) {

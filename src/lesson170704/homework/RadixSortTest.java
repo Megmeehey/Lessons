@@ -5,10 +5,6 @@ import java.util.Random;
 
 import static lesson170704.homework.RadixSort.radixsort;
 
-
-/**
- * Created by Megmeehey on 05.07.2017.
- */
 public class RadixSortTest {
     public static final int BIGARRAY = 1_000_000;
 
@@ -47,7 +43,7 @@ public class RadixSortTest {
         long end = System.currentTimeMillis();
         System.out.println("Time elapsed, while sorting (in millis): " + (end - start));
 
-        // Check if it is workingEpaM
+        // Check if it is working
         Arrays.sort(anotherArray);
         System.out.println("It's sorted, right?");
         if (Arrays.equals(array, anotherArray)) {

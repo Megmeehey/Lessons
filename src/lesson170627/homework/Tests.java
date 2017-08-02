@@ -3,9 +3,6 @@ package lesson170627.homework;
 import static lesson170624.classwork.SimpleUnit.assertEquals;
 import static lesson170624.homework.SimpleUnit.dropTestNumber;
 
-/**
- * Created by Megmeehey on 27.06.2017.
- */
 public class Tests {
     public static Converter converter = new Converter();
 

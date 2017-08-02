@@ -1,8 +1,5 @@
 package lesson170719.homework;
 
-/**
- * Created by megmeehey on 24.07.17.
- */
 class SuitPile extends CardPile {
 
     SuitPile(int x, int y) {

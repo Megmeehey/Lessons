@@ -1,7 +1,7 @@
 package lesson170710.classwork;
 
 // POJO class
-//  Plain Old Java Object
+// Plain Old Java Object
 class Node {
 
     String value;

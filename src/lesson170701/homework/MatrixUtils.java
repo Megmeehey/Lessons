@@ -3,9 +3,6 @@ package lesson170701.homework;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Created by Megmeehey on 04.07.2017.
- */
 public class MatrixUtils {
     public static int count(int[][] matrix, int max) {
         int r = 0;

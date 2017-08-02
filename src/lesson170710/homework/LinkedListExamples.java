@@ -3,9 +3,6 @@ package lesson170710.homework;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by megmeehey on 10.07.17.
- */
 public class LinkedListExamples {
     public static void main(String[] args) {
         List<String> doublyLinked = new ArrayList<>();

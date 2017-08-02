@@ -1,9 +1,7 @@
 package lesson170719.homework;
 
 import java.awt.*;
-/**
- * Created by megmeehey on 24.07.17.
- */
+
 class TablePile extends CardPile {
 
     TablePile(int x, int y, int c) {

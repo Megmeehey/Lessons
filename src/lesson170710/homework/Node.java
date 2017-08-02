@@ -1,10 +1,6 @@
 package lesson170710.homework;
 
 /**
- * Created by megmeehey on 10.07.17.
- */
-
-/**
  * Node class. Each of these stores data and link to next Node.
  * @param <E> - type of data to be stored at each Node
  */

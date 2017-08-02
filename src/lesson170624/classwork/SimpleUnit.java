@@ -1,9 +1,5 @@
 package lesson170624.classwork;
 
-/**
- * Created by Zaal on 24.06.17.
- */
-
 public class SimpleUnit {
 
     public static boolean assertEquals(String actual, String expected) {

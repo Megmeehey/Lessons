@@ -3,19 +3,8 @@ package lesson170629.homework;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Megmeehey on 29.06.2017.
- */
 public class Genome {
-    /*
-    String AAACGTGACATAGCTGATCGATCGTAGCATCGAC...
-    N = 100000
-    W = 20
-    Solutions:
-    1) for for for
-    2) Sort substrings length W
-    3) HashSet
-     */
+
     public static void main(String[] args) {
         byte[] data = DataGenerator.generate(300000);
         for (byte b : data) {

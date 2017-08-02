@@ -7,4 +7,4 @@ June 27, 2017
 - System.out.println(Integer.toHexString(x));
 - System.out.println(Integer.toOctalString(x));
 
-- System.out.println(Integer.toString(x,3));  // с указанием основания системы счисления  optional
+- System.out.println(Integer.toString(x,3));  // с указанием основания системы счисления (optional)

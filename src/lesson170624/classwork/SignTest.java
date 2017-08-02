@@ -4,10 +4,6 @@ import static lesson170624.classwork.MathUtils.sign;
 import static lesson170624.classwork.SimpleUnit.assertEquals;
 import static lesson170624.classwork.SimpleUnit.assertNotEquals;
 
-/**
- * Created by Megmeehey on 24.06.17.
- */
-
 public class SignTest {
     public static void main(String[] args) {
         // Some tests, including negative numbers
