@@ -23,7 +23,7 @@ public class TakeCare {
 
         pet = new Rat();
         System.out.println();
-        
+
         System.out.println("Rat");
         pet.play();
         System.out.println("---");
