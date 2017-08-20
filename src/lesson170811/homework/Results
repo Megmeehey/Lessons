@@ -1,0 +1,18 @@
+************************TABLE************************
+Testing size: 10000
+Operation      LinkedList     ArrayList       TreeSet
+Add               3533276       4303470      30343834
+Sort             27784168       8274469             -
+BinSearch         2403557         35760         35827
+
+Testing size: 100000
+Operation      LinkedList     ArrayList       TreeSet
+Add              43886461      17223568     154007740
+Sort            145810946      49343377             -
+BinSearch         8520118         65291         36899
+
+Testing size: 1000000
+Operation      LinkedList     ArrayList       TreeSet
+Add            1129085445     219926573    2220279426
+Sort            962813485     516173007             -
+BinSearch        47392475         33789         41991
