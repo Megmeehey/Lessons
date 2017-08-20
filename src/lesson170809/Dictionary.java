@@ -6,29 +6,13 @@ import java.util.*;
 
 public class Dictionary<K, V> implements Iterable<Pair<K, V>> {
 
-    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
-    private static final int MAX = 3;
-
-    private float loadFactor = DEFAULT_LOAD_FACTOR;
-    private int size = 0; // TODO: count size;
-
-    List<Pair>[] data = new List[MAX];
-
     static class Pair<K,V> implements Map.Entry<K,V> {
-        int hashKey; // So we don't waste time to calculate it again and again
         final K key;
         V value;
-
-        Pair(int hash, K key, V value) {
-            this.hashKey = hash;
-            this.key = key;
-            this.value = value;
-        }
 
         Pair(K key, V value) {
             this.key = key;
             this.value = value;
-            this.hashKey = key.hashCode();
         }
 
         public K getKey() {
@@ -70,6 +54,17 @@ public class Dictionary<K, V> implements Iterable<Pair<K, V>> {
 
     }
 
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
+    private static final int DEFAULT_SIZE = 4;
+    private float loadFactor = DEFAULT_LOAD_FACTOR;
+    private int size = 0;
+    private int listCount = 0;
+    List<Pair>[] data = new List[DEFAULT_SIZE];
+
+    public Dictionary(float lf) {
+        this.loadFactor = lf;
+    }
+
     public Dictionary() {
         this.loadFactor = DEFAULT_LOAD_FACTOR;
     }
@@ -83,22 +78,61 @@ public class Dictionary<K, V> implements Iterable<Pair<K, V>> {
     }
 
     public void put(K key, V value) {
-        Map<Integer, String> map = new HashMap<>();
-
         int index = hash(key);
+
         if (data[index] == null) {
             data[index] = new ArrayList<>();
+            listCount++;
         }
 
-        Pair pair = getPair(key);
+        Pair pair = getPair(index, key);
 
         if (pair == null) {
             data[index].add(new Pair(key, value));
-            return;
+            size++;
+        } else {
+            pair.value = value;
         }
 
-        pair.value = value;
+        if (data[index].size() > data.length * loadFactor) {
+            resize();
+        }
+    }
 
+    private void resize() {
+        List<Pair>[] dataCopy = data;
+        this.data = new List[dataCopy.length * 3 / 2];
+        this.listCount = 0;
+        this.size = 0;
+
+        for (int i = 0; i < dataCopy.length; i++) {
+            if (dataCopy[i] != null) {
+                for (int j = 0; j < dataCopy[i].size(); j++) {
+                    Pair<K, V> pair = dataCopy[i].get(j);
+                    this.put(pair.getKey(), pair.getValue());
+                    size++;
+                }
+            }
+        }
+    }
+
+    public V remove(K key) {
+        int hash = hash(key);
+        List<Pair> list = data[hash];
+
+        if (list == null) { // guard condition
+            return null;
+        }
+
+        for (Pair pair : list) {
+            if (pair.key.equals(key)) {
+                list.remove(pair);
+                size--;
+                return (V) pair.value;
+            }
+        }
+
+        return null;
     }
 
     private int hash(K key) {
@@ -106,16 +140,17 @@ public class Dictionary<K, V> implements Iterable<Pair<K, V>> {
     }
 
     public V get(K key) {
-        Pair pair = getPair(key);
+        Pair pair = getPair(hash(key), key); // Calculating hash anyway, why not to pass it to getPair method?
         return pair == null ? null : (V) pair.getValue();
     }
 
-    private Pair getPair(K key) {
-        int index = hash(key);
+    private Pair getPair(int index, K key) {
         List<Pair> list = data[index];
+
         if (list == null) { // guard condition
             return null;
         }
+
         for (Pair pair : list) {
             if (pair.key.equals(key)) {
                 return pair;
