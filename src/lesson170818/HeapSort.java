@@ -21,6 +21,8 @@ public class HeapSort {
 
         List<String> sorted = heapSort(list);
 
+        list.forEach(System.out::println);
+
         System.out.println(sorted);
     }
 
