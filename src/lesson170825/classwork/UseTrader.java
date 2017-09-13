@@ -85,40 +85,39 @@ public class UseTrader {
         System.out.println("---");
 
         Boolean areThereTradersInMilan
-                = transactions.stream()
-                .map(t -> t.getTrader())
-                .noneMatch(t -> t.getCity() == "Milan");
+                = transactions.stream()                     // get stream
+                .map(t -> t.getTrader())                    // get all Traders
+                .anyMatch(t -> t.getCity() == "Milan");     // check, if there any in Milan
 
         System.out.println("Task 5: " + areThereTradersInMilan);
         System.out.println("---");
 
         List<Integer> transactionsValuesTradersInCambridge
-                = transactions.stream()                                 // get stream
-                .filter(t -> t.getTrader().getCity() == "Cambridge")    // remove any transactions, that not match Cambridge city
-                .map(t -> t.getValue())                                 // get transaction values
-                .collect(Collectors.toList());                          // collect in a List
+                = transactions.stream()                                     // get stream
+                .filter(t -> t.getTrader().getCity().equals("Cambridge"))   // remove any transactions, that not match Cambridge city
+                .map(t -> t.getValue())                                     // get transaction values
+                .collect(Collectors.toList());                              // collect in a List
 
         System.out.println("Task 6: " + transactionsValuesTradersInCambridge);
         System.out.println("---");
 
         Optional<Integer> maxTransaction
-                = transactions.stream()
-                .map(t -> t.getValue())
-                .reduce(Math::max);
+                = transactions.stream()     // get stream
+                .map(t -> t.getValue())     // get all transaction values
+                .max(Integer::compareTo);   // using max, to get... max.
 
         System.out.print("Task 7: ");
         maxTransaction.ifPresent(System.out::println);
         System.out.println("---");
 
         Optional<Integer> minTransaction
-                = transactions.stream()
-                .map(t -> t.getValue())
-                .reduce(Math::min);
+                = transactions.stream() // get stream
+                .map(t -> t.getValue()) // get all transaction values
+                .reduce(Math::min);     // reduce, using min (We can use min method)
 
         System.out.print("Task 8: ");
         minTransaction.ifPresent(System.out::println);
         System.out.println("---");
-
 
     }
 }
